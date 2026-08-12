@@ -1,0 +1,41 @@
+# Nothing in this project needs to be committed except the tool itself and its docs.
+# Your work in progress lives in browser local storage, not in files.
+
+# Exported manuscripts and drafts
+*.docx
+*.pdf
+*.md.bak
+survey_paper*.md
+*_export.*
+
+# Database exports and reference data — these are inputs, not source
+*.csv
+*.ris
+*.bib
+scopus*.csv
+consensus*.csv
+
+# Saved project state, if you ever export it
+*project*.json
+*autosave*.json
+
+# Anything with a credential in the name — belt and braces, since a key in git
+# history cannot be removed by a later commit
+*.key
+*secret*
+*credential*
+.env
+.env.*
+
+# Build output — regenerate with build.ps1 rather than committing it.
+# Committing a 3 MB single-file build alongside the split sources means every commit
+# carries a full copy of the vendor blobs and git diff becomes useless.
+Survey_Paper_Builder_single_file.html
+
+# Editor and OS noise
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
